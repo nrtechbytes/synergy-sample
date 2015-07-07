@@ -51,6 +51,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-turbolinks'
 
 group :development, :test do
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
 
@@ -61,3 +62,4 @@ group :development, :test do
   gem 'spring'
 end
 
+gem 'rails_12factor', group: :production
