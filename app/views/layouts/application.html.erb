@@ -2,14 +2,48 @@
 <html>
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CS Firm</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+<div class="navbar navbar-inverse navbar-static-top">
+	<div class="container">
+		<%= link_to 'CS Firm', root_path, class: 'navbar-brand' %>
 
-<nav class="navbar navbar-inverse">
+		<button class="navbar-toggle" data-toggle = "collapse" data-target=".navHeaderCollapse"> 
+			<span class = "icon-bar"> </span>
+			<span class = "icon-bar"> </span>
+			<span class = "icon-bar"> </span>
+		</button>
+
+		<div class="collapse navbar-collapse navHeaderCollapse">
+			<ul class="nav navbar-nav navbar-right">
+				
+				<li class="active"><a href="<%= root_path %>">Home</a></li>	
+				<li><a href="#">Blog</a>	</li>	
+				<li class="dropdown" >
+					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown" >Online Consultation<b class="caret"></b></a>	
+					<ul class="dropdown-menu">
+						<% if user_signed_in? %>
+							<li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
+							<li><%= link_to 'Your Conversations', conversations_path %></li>
+							<li><%= link_to 'Log Out', destroy_user_session_path, method: :delete %></li>
+						<% else %>
+							<li><%= link_to 'Log In', new_user_session_path %></li>
+						<% end %>
+					</ul>
+				</li>	
+				<li><a href="#">About Us</a>	</li>	
+				 <li><a href="#">Contact</a>	</li>	
+			</ul>
+		</div>
+	</div>
+</div>	
+
+<!-- <nav class="navbar navbar-inverse">
 	<div class="container">
 		<div class="navbar-header">
 			<%= link_to 'CS Firm', root_path, class: 'navbar-brand' %>
@@ -25,24 +59,30 @@
 		</ul>
 	</div>
 </nav>
-<div class="container">
+ --><div class="container">
 	<% flash.each do |key, value| %>
 		<div class="alert alert-<%= key %>">
 			<%= value %>
 		</div>
 	<% end %>
 
-	<div class="page-header">
+<!-- 	<div class="page-header">
 		<h1><%= yield :page_header %></h1>
-	</div>
+	</div> -->
 
 	<%= yield %>
 </div>
 
 <footer>
-  <div class="container">
+	<div class="navbar navbar-default navbar-fixed-bottom">
+		<div class = "container">
+			<p class="navbar-text"> Powered by Garima</p>
+			<a class = "navbar-btn btn-danger btn pull-right" href="http://google.com">Click for additional stuff </a>
+		</div>
+	</div>
+  <!-- <div class="container">
     <p class="text-muted">Created by <a href="http://google.com" target="_blank">CS Firm</a></p>
-  </div>
+  </div> -->
 </footer>
 </body>
 </html>

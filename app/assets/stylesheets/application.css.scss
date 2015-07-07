@@ -16,8 +16,9 @@
 
 @charset "utf-8";
 
-@import 'bootstrap';
-@import 'bootstrap/theme';
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "bootstrap/theme";
 @import 'chosen';
 
 .alert-notice {
