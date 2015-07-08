@@ -52,7 +52,7 @@ Blogit.configure do |config|
 
   # If this is set, Blogit::PostsController will use the layout named here
   config.layout = "application"
-  config.inline_main_app_named_routes = true
+  # config.inline_main_app_named_routes = true
 
   # List of states that will be visible to the public
   config.active_states = [:published]
