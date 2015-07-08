@@ -22,6 +22,9 @@ Rails.application.routes.draw do
   resources :messages, only: [:new, :create]
 
   resources :users, only: [:index ]
+
+  mount Blogit::Engine => "/blog"
+  # mount Monologue::Engine, at: '/blog'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

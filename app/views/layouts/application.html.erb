@@ -23,7 +23,20 @@
 			<ul class="nav navbar-nav navbar-right">
 				
 				<li class="active"><a href="<%= root_path %>">Home</a></li>	
-				<li><a href="#">Blog</a>	</li>	
+				<li class="dropdown" >
+					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown" >Our Services<b class="caret"></b></a>	
+					<ul class="dropdown-menu">
+						<li><a href="#">Company Registration</a>	</li>
+						<li><a href="#">LLP Registration</a>	</li>
+						<li><a href="#">Secretarial Audit</a>	</li>
+						<li><a href="#">Company Law Board Matters</a>	</li>
+						<li><a href="#">Trademark And Copyright</a>	</li>
+						<li><a href="#">Service Tax</a>	</li>
+						<li><a href="#">Corporate Advisory</a>	</li>
+					</ul>
+				</li>	
+				<!-- <li><a href="#">Clientele</a>	</li>	 -->
+				<li><a href="<%= blogit_path %>">Blog</a>	</li>	
 				<li class="dropdown" >
 					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown" >Online Consultation<b class="caret"></b></a>	
 					<ul class="dropdown-menu">
@@ -37,7 +50,7 @@
 						<% end %>
 					</ul>
 				</li>	
-				<li><a href="#">About Us</a>	</li>	
+				<li><a href="#">News</a>	</li>	
 				 <li><a href="#">Contact</a>	</li>	
 			</ul>
 		</div>

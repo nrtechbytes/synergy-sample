@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
 
    acts_as_messageable
 
+   blogs
+
    def mailboxer_email(object)
    		email
    end
