@@ -21,7 +21,12 @@ Rails.application.routes.draw do
 
   resources :messages, only: [:new, :create]
 
-  resources :users, only: [:index ]
+  resources :users, only: [:index ] do
+    member do
+      post :assign_as_admin
+      post :unassign_as_admin
+    end
+  end
 
   mount Blogit::Engine => "/blog"
   # mount Monologue::Engine, at: '/blog'

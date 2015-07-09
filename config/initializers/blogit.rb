@@ -3,9 +3,12 @@ Blogit.configure do |config|
 
   # What kind of comments do you want to add to your blog ? (:active_record, :disqus or :no)
   config.include_comments = :active_record
+  
+  #  disqus can be used for comments due to this error - 
+  # config.include_comments = :disqus
 
   # When using disqus comments, what is the shortname of your forum ?
-  config.disqus_shortname = "YOURUSERNAME"
+  # config.disqus_shortname = "YOURUSERNAME"
 
   # Should there be a share bar on every post ?
   config.include_share_bar = true
@@ -51,7 +54,7 @@ Blogit.configure do |config|
   }
 
   # If this is set, Blogit::PostsController will use the layout named here
-  config.layout = "application"
+  # config.layout = "application"
   # config.inline_main_app_named_routes = true
 
   # List of states that will be visible to the public
@@ -59,5 +62,4 @@ Blogit.configure do |config|
 
   # List of states that will hide the posts from the public.
   config.hidden_states = [:draft, :archive]
-
 end

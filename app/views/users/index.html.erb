@@ -8,6 +8,12 @@
 			<% unless current_user == user %>
 				<%= link_to 'Send Message', new_message_path(to: user.id), class: 'btn btn-default btn-sm' %>
 			<% end %>
+
+			<% if !user.admin?  %>
+				<%= link_to 'Assign Admin Role', assign_as_admin_user_path(user), class: 'btn btn-default btn-sm', method: :post %>
+			<% elsif (user.admin? and current_user != user ) %>
+				<%= link_to 'Un-assign Admin Role', unassign_as_admin_user_path(user), class: 'btn btn-default btn-sm', method: :post %>
+			<% end %>
 		</li>	
 	<% end %>
 </ul>
