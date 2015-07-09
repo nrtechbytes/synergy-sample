@@ -29,6 +29,8 @@ Rails.application.routes.draw do
   end
 
   mount Blogit::Engine => "/blog"
+
+  mount Blogit::Admin::Engine => "/blog/admin"
   # mount Monologue::Engine, at: '/blog'
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
