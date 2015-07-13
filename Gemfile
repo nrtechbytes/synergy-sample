@@ -52,9 +52,9 @@ gem 'jquery-turbolinks'
 
 
 # gem 'monologue', '~> 0.4.1'
-gem "blogit"
+# gem "blogit"
 # Blogit depends on ActsAsTaggableOn
-gem "acts-as-taggable-on"
+# gem "acts-as-taggable-on"
 
 group :development, :test do
 

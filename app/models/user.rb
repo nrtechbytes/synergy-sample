@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
 
    acts_as_messageable
 
-   blogs
+   # blogs
 
    scope :admin, -> { where(admin: true) }
 
@@ -21,6 +21,10 @@ class User < ActiveRecord::Base
    def mailboxer_email(object)
    		email
    end
+
+   # def username
+   #  name
+   # end
 
    private
    def self.toggle_admin_status(user_id, status)

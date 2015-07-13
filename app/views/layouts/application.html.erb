@@ -21,10 +21,9 @@
 
 		<div class="collapse navbar-collapse navHeaderCollapse">
 			<ul class="nav navbar-nav navbar-right">
-				
-				<li class="active"><a href="<%= root_path %>">Home</a></li>	
-				<li class="dropdown" >
-					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown" >Our Services<b class="caret"></b></a>	
+				<li class="<%= 'active' if current_page?(root_path) %>"><%= link_to 'Home', root_path %></li>	
+				<li class="dropdown <%= 'active' if current_page?(services_path) %>" >
+					<%= link_to 'Our Services <b class="caret"></b>'.html_safe, services_path, :class => "dropdown-toggle", :data => {:toggle => "dropdown"} %>
 					<ul class="dropdown-menu">
 						<li><a href="#">Company Registration</a>	</li>
 						<li><a href="#">LLP Registration</a>	</li>
@@ -36,9 +35,9 @@
 					</ul>
 				</li>	
 				<!-- <li><a href="#">Clientele</a>	</li>	 -->
-				<li><a href="<%= blogit_path %>">Blog</a>	</li>	
-				<li class="dropdown" >
-					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown" >Online Consultation<b class="caret"></b></a>	
+				<li><%= link_to 'Blog', services_path %></li>
+				<li class="dropdown <%= 'active' if  ['users', 'messages', 'conversations'].include?(controller_name) %>" >
+					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown" >Online Consultation <b class="caret"></b></a>	
 					<ul class="dropdown-menu">
 						<% if user_signed_in? %>
 							<li><%= link_to 'Edit Profile', edit_user_registration_path %></li>
@@ -72,7 +71,14 @@
 	<%= yield %>
 </div>
 
-<footer>
+<footer class="footer">
+	<div class="container">
+		<p class="navbar-text">Powered by Garima Raj & Associates</p>
+  		<a class = "navbar-btn btn-danger btn pull-right" href="http://google.com">Click for additional stuff </a>
+	</div>
+</footer>
+
+<!-- <footer>
 	<div class="navbar navbar-default navbar-fixed-bottom">
 		<div class = "container">
 			<p class="navbar-text"> Powered by Garima Raj & Associates</p>
@@ -80,6 +86,6 @@
 		</div>
 	</div>
 
-</footer>
+ </footer>-->
 </body>
 </html>
