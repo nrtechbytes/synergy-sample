@@ -215,12 +215,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-<<<<<<< HEAD
-=======
-  acts-as-taggable-on
-  blogit
-  blogit-admin
->>>>>>> 10c1a63d3b74977740c9a2d3bd9f6ed7d1e2053a
   bootstrap-sass
   bootstrap-will_paginate
   byebug
