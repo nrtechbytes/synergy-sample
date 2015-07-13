@@ -51,14 +51,6 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-turbolinks'
 
 
-# gem 'monologue', '~> 0.4.1'
-# gem "blogit"
-# Blogit depends on ActsAsTaggableOn
-# gem "acts-as-taggable-on"
-
-
-gem "blogit-admin"
-
 group :development, :test do
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
