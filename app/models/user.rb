@@ -22,10 +22,6 @@ class User < ActiveRecord::Base
    		email
    end
 
-   # def username
-   #  name
-   # end
-
    private
    def self.toggle_admin_status(user_id, status)
    		user  = get_obj(user_id)

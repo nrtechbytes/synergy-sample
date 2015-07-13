@@ -14,6 +14,18 @@ class ApplicationController < ActionController::Base
     redirect_to request.referer || path
   end
 
+  def authenticate_blogger
+    current_user.admin?
+  end
+
+  def blogit_admin_sign_out_url
+    destroy_user_session_path
+  end
+
+  def current_blogger
+    current_user
+  end
+
   protected
 
   def configure_permitted_parameters

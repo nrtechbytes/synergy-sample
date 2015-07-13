@@ -56,6 +56,9 @@ gem 'jquery-turbolinks'
 # Blogit depends on ActsAsTaggableOn
 # gem "acts-as-taggable-on"
 
+
+gem "blogit-admin"
+
 group :development, :test do
 
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

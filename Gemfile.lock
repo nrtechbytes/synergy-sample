@@ -94,6 +94,8 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    epic-editor-rails (0.2.4)
+      railties (>= 3.2, < 5.0)
     erubis (2.7.0)
     execjs (2.5.2)
     ffi (1.9.10)
@@ -213,6 +215,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+<<<<<<< HEAD
+=======
+  acts-as-taggable-on
+  blogit
+  blogit-admin
+>>>>>>> 10c1a63d3b74977740c9a2d3bd9f6ed7d1e2053a
   bootstrap-sass
   bootstrap-will_paginate
   byebug
