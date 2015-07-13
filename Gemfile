@@ -50,6 +50,7 @@ gem 'compass-rails', '~> 2.0.4'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-turbolinks'
 
+gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy'
 
 group :development, :test do
 

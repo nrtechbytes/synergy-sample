@@ -26,6 +26,11 @@ class ApplicationController < ActionController::Base
     current_user
   end
 
+
+  def blog
+    redirect_to "hhttps://nrtechbytes.wordpress.com#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
+  end
+  
   protected
 
   def configure_permitted_parameters

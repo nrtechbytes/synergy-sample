@@ -25,17 +25,17 @@
 				<li class="dropdown <%= 'active' if current_page?(services_path) %>" >
 					<%= link_to 'Our Services <b class="caret"></b>'.html_safe, services_path, :class => "dropdown-toggle", :data => {:toggle => "dropdown"} %>
 					<ul class="dropdown-menu">
-						<li><a href="#">Company Registration</a>	</li>
-						<li><a href="#">LLP Registration</a>	</li>
-						<li><a href="#">Secretarial Audit</a>	</li>
-						<li><a href="#">Company Law Board Matters</a>	</li>
-						<li><a href="#">Trademark And Copyright</a>	</li>
-						<li><a href="#">Service Tax</a>	</li>
-						<li><a href="#">Corporate Advisory</a>	</li>
+						<li><%= link_to 'Company Registration', services_path %>	</li>
+						<li><%= link_to 'LLP Registration', services_path %></a>	</li>
+						<li><%= link_to 'Secretarial Audit', services_path %></a>	</li>
+						<li><%= link_to 'Company Law Board Matters', services_path %></a>	</li>
+						<li><%= link_to 'Trademark And Copyright', services_path %></a>	</li>
+						<li><%= link_to 'Service Tax', services_path %></a>	</li>
+						<li><%= link_to 'Corporate Advisory', services_path %></a>	</li>
 					</ul>
 				</li>	
 				<!-- <li><a href="#">Clientele</a>	</li>	 -->
-				<li><%= link_to 'Blog', services_path %></li>
+				<li><%= link_to 'Blog', '/blog' %></li>
 				<li class="dropdown <%= 'active' if  ['users', 'messages', 'conversations'].include?(controller_name) %>" >
 					<a href="#" class = "dropdown-toggle" data-toggle = "dropdown" >Online Consultation <b class="caret"></b></a>	
 					<ul class="dropdown-menu">
