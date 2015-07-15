@@ -50,8 +50,8 @@ gem 'compass-rails', '~> 2.0.4'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-turbolinks'
 
-gem 'rack-reverse-proxy',  :path => 'lib/rack-reverse-proxy'
-# gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy',  :git => 'https://github.com/nrtechbytes/rack-reverse-proxy.git'
+# gem 'rack-reverse-proxy',  :path => 'lib/rack-reverse-proxy'
+gem 'rack-reverse-proxy', :require => 'rack/reverse_proxy',  :git => 'https://github.com/nrtechbytes/rack-reverse-proxy.git'
 
 
 group :development, :test do

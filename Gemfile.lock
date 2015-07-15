@@ -1,5 +1,6 @@
-PATH
-  remote: lib/rack-reverse-proxy
+GIT
+  remote: https://github.com/nrtechbytes/rack-reverse-proxy.git
+  revision: 78f7ad994653afc14ec5ad96e8a95cc0d979bd5b
   specs:
     rack-reverse-proxy (0.8.1)
       rack (>= 1.0.0)
