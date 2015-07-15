@@ -27,10 +27,10 @@ class ApplicationController < ActionController::Base
   end
 
 
-  def blog
-    redirect_to "https://nrtechbytes.wordpress.com", :status => :moved_permanently
-    # redirect_to "https://nrtechbytes.wordpress.com#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
-  end
+  # def blog
+  #   redirect_to "https://nrtechbytes.wordpress.com", :status => :moved_permanently
+  #   # redirect_to "https://nrtechbytes.wordpress.com#{request.fullpath.gsub('/blog','')}", :status => :moved_permanently
+  # end
   
   protected
 

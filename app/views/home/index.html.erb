@@ -8,30 +8,22 @@
 			<a class="btn btn-info">Tweet it!</a>
 		</div>
 	</div>
-
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
-				<h3><a href="">Sub Section I</a></h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it...</p>
-				<a href="#" class="btn btn-default">Read More</a>
-			</div>
-			<div class="col-md-3">
-				<h3><a href="">Sub Section II</a></h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it...</p>
-				<a href="#" class="btn btn-default">Read More</a>
-			</div>
-			<div class="col-md-3">
-				<h3><a href="">Sub Section III</a></h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it...</p>
-				<a href="#" class="btn btn-default">Read More</a>
-			</div>
-			<div class="col-md-3">
-				<h3><a href="">Sub Section IV</a></h3>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it...</p>
-				<a href="#" class="btn btn-default">Read More</a>
-			</div>
-			
+			<% @posts.parsed_response['posts'].each do |post| %>
+				<div class="col-md-3">
+					<h3> <%= link_to post['title'].html_safe, post['URL']  %>
+					</h3>
+					<p><%= post['excerpt'].html_safe %> </p>
+				</div>
+			<% end %>
+		</div>
+		<div class="row">
+			<% 4.times do %>
+				<div class="col-md-3">
+					<a href="#" class="btn btn-info">Read More</a>	
+				</div>
+			<% end %>
 		</div>
 		
 	</div>
