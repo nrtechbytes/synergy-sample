@@ -10,20 +10,21 @@
 	</div>
 	<div class="container">
 		<div class="row">
-			<% @posts.parsed_response['posts'].each do |post| %>
+			<% @posts.parsed_response['posts'].each do |post| 
+				post_url = URI.parse(post['URL'])  
+				blog_url = @site_domain + '/blog' + post_url.path %>
 				<div class="col-md-3">
-					<h3> <%= link_to post['title'].html_safe, post['URL']  %>
-					</h3>
-					<p><%= post['excerpt'].html_safe %> </p>
+					<div class="row">
+						<h3> <%= link_to post['title'].html_safe, blog_url  %>
+						</h3>
+					</div>
+					<div class="row">
+						<p><%= post['excerpt'].html_safe %> </p>
+					</div>
+					<div class="row">
+						<%= link_to 'Read More', blog_url, :class => "btn btn-info" %>
+					</div>
 				</div>
 			<% end %>
 		</div>
-		<div class="row">
-			<% 4.times do %>
-				<div class="col-md-3">
-					<a href="#" class="btn btn-info">Read More</a>	
-				</div>
-			<% end %>
-		</div>
-		
 	</div>
